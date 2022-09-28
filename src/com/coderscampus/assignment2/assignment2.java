@@ -10,10 +10,12 @@ public class assignment2 {
 		Random random = new Random();
 		int trys = 0;
 		int targetNumber = random.nextInt(100) +1;
+		Scanner scanner = new Scanner(System.in); 
+
 			while (trys < 5) {
 				System.out.println("Type a number betweent 1 and 100");
-				Scanner scanner = new Scanner(System.in);   
 				String userInput = scanner.nextLine();
+
 				Integer name = Integer.parseInt(userInput);
 				if (name >= 100) {
 					System.out.println("Your guess is not between 1 and 100, please try again");
@@ -33,8 +35,9 @@ public class assignment2 {
 					System.out.println("You Win!"); 
 					break;
 				}
-				scanner.close();
 			}
-		System.out.println("The number to guess was: " + targetNumber);	
-	}
+		 
+			System.out.println("The number to guess was: " + targetNumber);	
+			scanner.close();
+}
 }
